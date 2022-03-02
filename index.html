@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="content-container">
+        <div class="header">
+            <a class="header-text">Library</a>
+            <button class="button" aria-label="Add a new book" data-modal="bookModal">New Book</button>
+        </div>
+        <div id="container">
+        </div>
+    </div>
+    <div id="bookModal" class="modal">
+        <div class="modal-content">
+            <div class="contact-form">
+            <form id="form" onsubmit="addBook(event, this)">
+                <div class="form-header">
+                    <h2>Add a new book</h2>
+                    <a class="close">&times;</a>
+                </div>
+                <div class="input-fields">
+                    <input class="name" type="text" name="title" placeholder="Title" maxlength="60" required/>
+                    <input type="text" name="author" placeholder="Author" maxlength="60" required/>
+                    <input type="number" name="pages" placeholder="Number of pages" required/>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="isRead" value="true"/>
+                        <label for="is-read">Is the book read?</label>
+                        
+                    </div>
+                </div>
+
+                <button type="submit">Submit</button>
+            </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
